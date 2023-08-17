@@ -13,7 +13,7 @@ const SingleProduct = ({ product }) => {
         <p>Price : {product.price}</p>
         <p>Key Feature : {product.key_feature}</p>
         <p>Status : {product.status}</p>
-        <Link href={`/detailSingleProduct/${product._id}`}>
+        <Link href={`/singleproduct/${product._id}`}>
           <button className="btn btn-primary">More Info</button>
         </Link>
       </div>
