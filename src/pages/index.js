@@ -3,7 +3,7 @@
 import RootLayout from "@/Components/Layout/RootLayout";
 import AllProducts from "@/Components/UI/AllProducts";
 
-export default function HomePage({ allProducts }) {
+export default function HomePage({}) {
   return (
     <>
       <div className="hero h-[1000px] mt-25  bg-base-100">
@@ -28,22 +28,11 @@ export default function HomePage({ allProducts }) {
           </div>
         </div>
       </div>
-      <AllProducts allProducts={allProducts} />
+      {/* <AllProducts allProducts={allProducts} /> */}
     </>
   );
 }
 
 HomePage.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
-};
-
-export const getStaticProps = async () => {
-  const res = await fetch(`http://localhost:3000/api/allProducts`);
-  const data = await res.json();
-  // console.log(data);
-  return {
-    props: {
-      allProducts: data,
-    },
-  };
 };
