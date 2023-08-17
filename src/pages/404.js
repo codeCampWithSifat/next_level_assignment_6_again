@@ -3,7 +3,6 @@ import React from "react";
 
 const NotFound = () => {
   const router = useRouter();
-
   setTimeout(() => {
     router.push("/");
   }, 2000);
